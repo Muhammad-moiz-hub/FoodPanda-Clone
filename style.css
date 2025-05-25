@@ -1,0 +1,14 @@
+#card a img{
+    display: block;
+    object-fit: cover;
+    /* height:250px; */
+    
+    
+}
+main img{
+    transition-duration: 1.5s;
+}
+main img:hover{
+    transform: scaleY(1.2);
+
+}
