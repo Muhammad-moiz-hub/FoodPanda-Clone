@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodPenda</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="shortcut icon" href="../images/logo copy.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav class="h-[10vh] bg-[#db3274] justify-around flex items-center">
+        <div class="flex h-[10vh] items-center gap-5 text-2xl font-semibold">
+
+            <a class="flex items-center gap-5" href="../home page/index.html">
+                <img src="../images/logo.png" class="h-[6vh] md:h-[8vh] bg-white rounded-[50%]" alt="">
+                <h1 class="hidden md:flex">FoodPenda</h1>
+            </a>
+        </div>
+        <div class="flex  h-[10vh] items-center gap-5">
+
+            <input type="search" id="search" class="p-3 rounded-3xl h-[3vh] w-[30vw] md:h-[5vh] md:w-[40vw]" name="" id=""
+                placeholder="Search">
+            <button onclick="search()" class="text-center"><i class="ri-search-2-line text-2xl md:text-3xl"></i></button>
+        </div>
+        <button id="btn" onclick="signuppage()"
+            class="text-white bg-[#ff2075]  hover:bg-[#901c48] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:px-5 px-2 py-1 md:py-2.5 text-center">Login/Signup</button>
+        <button onclick="dashboard()" id="probtn"
+            class="text-white hidden bg-[#ff2075] hover:bg-[#901c48] focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm md:px-5 px-2 py-1 md:py-2.5 text-center">DashBoard</button>
+    </nav>
+
+
+
+    <main class="h-[25vh] md:h-[50vh] mt-3 w-full flex justify-center items-center">
+        <img src="../images/banner.jpg" class="h-[25vh] md:w-[90%] md:h-[50vh]" alt="">
+    </main>
+    <br>
+    <hr class="h-1 bg-pink-600">
+    <div class="">
+
+        <h1 class="text-3xl mt-3 mb-5 ml-28">Restaurant Name</h1>
+        <div id="trenditem" class="flex flex-wrap w-full justify-center gap-5">
+
+
+        </div>
+    </div>
+    <div id="Admindiv" class="hidden">
+        <h1 class="text-3xl mt-3 mb-5 ml-28">Admin Foods</h1>
+        <div id="Adminitems" class="flex flex-wrap w-full justify-center gap-5">
+
+
+        </div>
+    </div>
+    <br>
+    <hr class="h-1 bg-pink-600">
+
+    <!-- card code start -->
+    <div class="max-w-7xl mx-auto px-4 py-7">
+        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Find us in these cities and many more!</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
+                <img src="../images/Karachi.webp" alt="Service 1" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Karachi</h3>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
+                <img src="../images/Islamabad.webp" alt="Service 2" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Islamabad</h3>
+
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
+                <img src="../images/Lahore.webp" alt="Service 3" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Lahore</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 ">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
+                <img src="../images/Peshawar.webp" alt="Service 1" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Peshawar</h3>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
+                <img src="../images/Quetta.webp" alt="Service 2" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Quetta</h3>
+
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
+                <img src="../images/Faisalabad.webp" alt="Service 3" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Faisalabad</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 py-7">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
+                <img src="../images/abottabad.webp" alt="Service 1" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Abottabad</h3>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
+                <img src="../images/Bhawalpur.webp" alt="Service 2" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Bahawalpur</h3>
+
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden">
+                <img src="../images/Jehlum.webp" alt="Service 3" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Jhelum</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-pink-600 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Column 1: Company Name and Logo -->
+                <div>
+                    <img src="../images/logo copy.png" alt="Logo" class="h-12 mb-4">
+                    <h2 class="text-xl font-semibold mb-2">foodpenda</h2>
+                </div>
+
+                <!-- Column 2: Social Media Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400  hover:text-white">
+                            <i class="ri-instagram-line text-2xl"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="ri-facebook-box-line text-2xl"></i>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="ri-youtube-line text-2xl"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="ri-twitter-line text-2xl"></i>
+                            <span class="sr-only">LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 3: Page Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodPenda Signup Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="../images/logo copy.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div id="log" class="flex w-full h-[100vh] bg-[#f3659b] items-center justify-center">
+        <div class="flex flex-col md:flex-row  w-[90%] h-[70vh] md:w-[60%] border-[#db3274] border-[4px] rounded-2xl">
+            <div
+                class="md:w-[50%] h-[35vh] md:rounded-l-lg md:rounded-none md:h-full flex items-center justify-center bg-white md:bg-[#efd4de] rounded-t-xl">
+                <img class=" h-[20vh] md:h-[28vh]" src="../images/images.png" alt="">
+            </div>
+            <div id="Signup"
+                class="flex md:rounded-r-lg md:rounded-b-none rounded-b-md bg-white flex-col gap-2 md:gap-4 h-[69vh] md:w-[50%] items-center justify-center">
+                <h1>Signup As A ?</h1>
+                <div class="flex gap-2">
+                    <button onclick="customerlog()"
+                        class=" h-[6vh] rounded-2xl bg-[#db3274] w-28 md:w-32 md:h-[5vh]">Customer</button>
+                    <button
+                        class=" h-[6vh] rounded-2xl bg-white border-[#db3274] border-2 w-24 md:w-28 md:h-[5vh]">Admin</button>
+                </div>
+                <h1 class="text-[#3b3b3b] text-3xl md:text-2xl font-bold">Admin Signup Page</h1>
+                <input id="AdminName"
+                    class="pl-3 h-[6vh] border-[#db3274] border-2 rounded-lg md:h-[5vh]  w-[90%] md:w-[80%]" type="text"
+                    placeholder="Enter Your Name">
+                <input id="AdminEmail"
+                    class="pl-3 h-[6vh] border-[#db3274] border-2 rounded-lg md:h-[5vh] w-[90%] md:w-[80%] "
+                    type="email" placeholder="Email">
+                <input id="password"
+                    class="h-[6vh] pl-3 border-[#db3274] border-2 rounded-lg md:h-[5vh] w-[90%]  md:w-[80%]"
+                    type="password" placeholder="Enter Your Password">
+                <div class="flex gap-3 items-center md:w-[80%] w-[85%] border-[#db3274] "><input id="checkbox"
+                        onclick="btn()" type="checkbox">Show
+                    password</div>
+                <button class=" h-[6vh] rounded-2xl bg-[#db3274] md:w-[80%] w-[90%] md:h-[5vh]"
+                    onclick="adminsignup()">Signup</button>
+                    <h1>You have already account? <a class='text-[#db3274]' href='../login/login.html'>Login</a></h1>
+            </div>
+            <script src="signup.js"></script>
+</body>
+
+</html>
